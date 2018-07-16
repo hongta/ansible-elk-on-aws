@@ -1,0 +1,6 @@
+---
+- name: Elasticsearch main tasks
+  debug: msg=Elasticsearch
+
+- include: ec2group.yml
+- include: ec2instance.yml

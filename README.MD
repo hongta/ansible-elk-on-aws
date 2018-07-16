@@ -15,7 +15,7 @@ Python 2.7.14
 > pip --version
 pip 9.0.3 from /usr/lib/python2.7/site-packages (python 2.7)
 
-> pip install ansible  --user
+> pip install ansible boto3 --user
 ...
 > which ansible
 ~/.local/bin/ansible
@@ -27,13 +27,13 @@ pip 9.0.3 from /usr/lib/python2.7/site-packages (python 2.7)
  - `subnets` for application Load balancer
 
 ## Roles
-### Logstash
 
+### Logstash
+- Security Group for EC2 instance
 - EC2 instances
 - Application LoadBalancer
 - Security Group for ALB
 
 ### Elasticsearch
+- Security Group for EC2 instances
 - EC2 instances
-- Application LoadBalancer (port: 9200)
-- Security Group for ALB

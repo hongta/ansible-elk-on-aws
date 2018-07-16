@@ -1,2 +1,3 @@
-- name: Elasticsearch main tasks
-  debug: msg=Elasticsearch
+---
+- name: Logstash main tasks
+  debug: msg=Logstash
