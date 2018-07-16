@@ -5,6 +5,8 @@
     instance_type: t2.micro
     group_id: sg_ec2_elk_elasticsearch.group_id
     region: ap-southeast-1
+    instance_tags:
+      Name: ELK-Elasticsearch
     volumes:
       - device_name: /dev/xvda
         volume_type: gp2

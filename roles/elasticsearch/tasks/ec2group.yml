@@ -12,6 +12,6 @@
       - proto: tcp
         from_port: 9300
         to_port: 9400
-        cidr_ip: SG-ELK-ELASTICSEARCH
+        group_name: SG-ELK-ELASTICSEARCH
   register: sg_ec2_elk_elasticsearch
       
