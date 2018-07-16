@@ -32,3 +32,8 @@ pip 9.0.3 from /usr/lib/python2.7/site-packages (python 2.7)
 - EC2 instances
 - Application LoadBalancer
 - Security Group for ALB
+
+### Elasticsearch
+- EC2 instances
+- Application LoadBalancer (port: 9200)
+- Security Group for ALB

@@ -1,0 +1,7 @@
+- name: Setup AWS EC2 instances for Elasticsearch
+  hosts: localhost
+  gather_facts: false
+  connection: local
+
+  roles:
+    - elasticsearch

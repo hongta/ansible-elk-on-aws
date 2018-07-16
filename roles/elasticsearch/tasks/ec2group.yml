@@ -1,0 +1,17 @@
+- name: Create EC2 Security group for Elasticsearch
+  ec2_group:
+    name: SG-ELK-ELASTICSEARCH
+    description: Security Group for Elasticsearch EC2 instance
+    vpc_id: 12345
+    region: ap-southeast-1
+    rules:
+      - proto: tcp
+        from_port: 9200
+        to_port: 9200
+        cidr_ip: 0.0.0.0/0
+      - proto: tcp
+        from_port: 9300
+        to_port: 9400
+        cidr_ip: SG-ELK-ELASTICSEARCH
+  register: sg_ec2_elk_elasticsearch
+      

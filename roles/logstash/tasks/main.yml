@@ -1,0 +1,2 @@
+- name: Elasticsearch main tasks
+  debug: msg=Elasticsearch
