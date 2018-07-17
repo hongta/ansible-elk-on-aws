@@ -4,6 +4,4 @@
 
 - include: ec2group.yml
 - include: ec2instance.yml
-
-- name: EC2 instances
-  debug: msg="{{ ec2_elk_logstash }}"
+- include: elb_targetgroup.yml

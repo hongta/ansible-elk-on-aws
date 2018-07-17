@@ -14,5 +14,5 @@
         volume_size: 10
     count_tag:
       Name: elk-logstash
-    exact_count: 1 
+    exact_count: 2 
   register: ec2_elk_logstash

@@ -1,11 +1,17 @@
 - name: EC2 load balancer for Logstash
   elb_application_lb:
     name: alb-elk-logstash
-    security_group: {{ sg_ec2_elk_logstash.group_id }}
+    region: ap-southeast-1
+    security_groups: "{{ sg_ec2_elk_logstash.group_id }}"
     subnets:
       - subnet-daf6a2ad
-      - subnet-daf6a2ad
+      - subnet-920b51f7
     scheme: internet-facing
     listeners:
       - Protocol: HTTP
-        Port: 80
+        Port: 80 # Required. The port on which the load balancer is listening.
+        DefaultActions:
+          - Type: forward # Required. Only 'forward' is accepted at this time
+            TargetGroupName:  tg-elk-logstash # Required. The name of the target group
+    state: present
+~
