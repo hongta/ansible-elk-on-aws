@@ -78,7 +78,7 @@
     - Restart logstash
 
 - name: Logstash Plugins
-  include: plugins.yml
+  include: plugin.yml
 
 - name: Start logstash
   service: name=logstash enabled=yes state=started

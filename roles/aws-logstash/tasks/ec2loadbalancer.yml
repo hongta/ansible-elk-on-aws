@@ -14,4 +14,3 @@
           - Type: forward # Required. Only 'forward' is accepted at this time
             TargetGroupName:  tg-elk-logstash # Required. The name of the target group
     state: present
-~
