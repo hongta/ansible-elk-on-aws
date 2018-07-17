@@ -29,14 +29,21 @@ pip 9.0.3 from /usr/lib/python2.7/site-packages (python 2.7)
 
 ## Roles
 
-### Logstash
+### java
+Install java 1.8 for Logstash and Elasticsearch
+
+### AWS-Logstash
 tasks to setup AWS infra and Logstash servers
 
 - Security Group for EC2 instance
 - EC2 instances
 - Target Group
 - Application LoadBalancer
-- Security Group for ALB
+
+### Service-Logstash
+Install Logstash and configuraiton
+
+
 
 ### Elasticsearch
 tasks to setup AWS infra and Elasticsearch servers
