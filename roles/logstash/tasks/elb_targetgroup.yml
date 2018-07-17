@@ -1,0 +1,15 @@
+- name: target group for ALB
+  elb_target_group:
+    name: tg-elk-logstash
+    protocol: http
+    port: 80
+    vpc_id: vpc-5bc2ac3e
+    health_check_path: /
+    successful_response_codes: "200"
+    targets:
+      - Id: "{{ item.id }}"
+        Port: 80
+    loop: "{{ ec2_elk_logstash }}"
+    state: present
+    wait_timeout: 200
+    wait: True

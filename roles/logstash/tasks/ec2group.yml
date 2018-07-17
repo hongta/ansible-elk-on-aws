@@ -1,0 +1,13 @@
+- name: Create EC2 Security group for Logstash
+  ec2_group:
+    name: SG-ELK-LOGSTASH
+    description: Security Group for Logstash EC2 instance
+    vpc_id: vpc-5bc2ac3e
+    region: ap-southeast-1
+    rules:
+      - proto: tcp
+        from_port: 80
+        to_port: 80
+        cidr_ip: 0.0.0.0/0
+  register: sg_ec2_elk_logstash
+      

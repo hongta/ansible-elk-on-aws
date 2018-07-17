@@ -1,0 +1,11 @@
+- name: EC2 load balancer for Logstash
+  elb_application_lb:
+    name: alb-elk-logstash
+    security_group: {{ sg_ec2_elk_logstash.group_id }}
+    subnets:
+      - subnet-daf6a2ad
+      - subnet-daf6a2ad
+    scheme: internet-facing
+    listeners:
+      - Protocol: HTTP
+        Port: 80

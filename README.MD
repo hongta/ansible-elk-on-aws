@@ -31,6 +31,7 @@ pip 9.0.3 from /usr/lib/python2.7/site-packages (python 2.7)
 ### Logstash
 - Security Group for EC2 instance
 - EC2 instances
+- Target Group
 - Application LoadBalancer
 - Security Group for ALB
 
