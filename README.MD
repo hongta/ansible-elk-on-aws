@@ -19,6 +19,7 @@ pip 9.0.3 from /usr/lib/python2.7/site-packages (python 2.7)
 ...
 > which ansible
 ~/.local/bin/ansible
+```
 
 ## Usage
 
@@ -29,6 +30,8 @@ pip 9.0.3 from /usr/lib/python2.7/site-packages (python 2.7)
 ## Roles
 
 ### Logstash
+tasks to setup AWS infra and Logstash servers
+
 - Security Group for EC2 instance
 - EC2 instances
 - Target Group
@@ -36,5 +39,10 @@ pip 9.0.3 from /usr/lib/python2.7/site-packages (python 2.7)
 - Security Group for ALB
 
 ### Elasticsearch
+tasks to setup AWS infra and Elasticsearch servers
+
 - Security Group for EC2 instances
 - EC2 instances
+
+## Referrers
+ - [ansible-logstash](https://github.com/wunzeco/ansible-logstash/blob/master/handlers/main.yml)

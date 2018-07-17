@@ -5,3 +5,18 @@
 - include: ec2group.yml
 - include: ec2instance.yml
 - include: elb_targetgroup.yml
+
+- name: Provision a set of instances
+  add_host: hostname="{{ item.public_ip }}" groups=ec2hosts
+  loop: "{{ ec2_elk_logstash.instances }}"
+
+- name: Test Host connection
+  debug:
+    msg: "hello"
+# install and config logstash
+# - include: install.yml
+# - include: logstash.yml
+# - include: plugins.yml
+
+# - name: Start logstash
+#   service: name=logstash enabled=yes state=started
