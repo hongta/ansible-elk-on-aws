@@ -14,6 +14,7 @@
 - name: Test Host connection
   hosts: ec2_group_logstash
   user: ec2-user
+  become: true
 
   roles:
     - service-logstash
