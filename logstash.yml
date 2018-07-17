@@ -4,4 +4,16 @@
   connection: local
 
   roles:
-    - logstash
+    - aws-logstash
+  
+  tasks:
+    - name: Provision a set of instances
+      add_host: hostname={{ item.public_ip }} groups=ec2_group_logstash
+      loop: "{{ ec2_elk_logstash.tagged_instances }}"
+
+- name: Test Host connection
+  hosts: ec2_group_logstash
+  user: ec2-user
+
+  roles:
+    - service-logstash

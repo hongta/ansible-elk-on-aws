@@ -1,0 +1,5 @@
+---
+- include: ec2group.yml
+- include: ec2instance.yml
+- include: elb_targetgroup.yml
+- include: ec2loadbalancer.yml
