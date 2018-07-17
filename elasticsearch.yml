@@ -11,12 +11,18 @@
       add_host: hostname={{ item.public_ip }} groups=ec2_group_elasticsearch
       loop: "{{ ec2_elk_elasticsearch.tagged_instances }}"
 
-- name: Test Connection
+    - name: wait for instances
+      pause:
+       minutes: 1
+
+
+- name: Setup Elasticsearch
   hosts: ec2_group_elasticsearch
   user: ec2-user
   become: true
 
-  tasks:
-    - name: Test
-      debug:
-        msg="Hello"
+  roles:
+    - role: elastic.elasticsearch
+      es_instance_name: "node1"
+      es_host_api: 0.0.0.0
+      es_enable_xpack: false
