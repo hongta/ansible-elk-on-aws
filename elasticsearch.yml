@@ -24,5 +24,5 @@
   roles:
     - role: elastic.elasticsearch
       es_instance_name: "node1"
-      es_host_api: 0.0.0.0
+      es_host_api: _eth0_
       es_enable_xpack: false
