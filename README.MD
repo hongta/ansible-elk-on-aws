@@ -45,11 +45,14 @@ Install Logstash and configuraiton
 
 
 
-### Elasticsearch
-tasks to setup AWS infra and Elasticsearch servers
+### AWS-Elasticsearch
+tasks to setup AWS infra for Elasticsearch servers
 
 - Security Group for EC2 instances
 - EC2 instances
+
+### Elastic.Elasticsearch
+Official Elasticsearch playbook
 
 ## Referrers
  - [ansible-logstash](https://github.com/wunzeco/ansible-logstash/blob/master/handlers/main.yml)
