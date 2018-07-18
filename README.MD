@@ -7,7 +7,7 @@ Setup and install Ansible on the EC2 instance, and allow this instance to create
 #### Assign the role to the instance
 #### Install Python, PIP and Ansible
 ```
-> sudo yum install python
+> sudo yum install python-pip
 
 > python --version
 Python 2.7.14
@@ -20,6 +20,9 @@ pip 9.0.3 from /usr/lib/python2.7/site-packages (python 2.7)
 > which ansible
 ~/.local/bin/ansible
 ```
+#### Setup Private key for ELK instances
+private key for Logstash `.ssh/logstah.pem`
+private key for Elasticsearch `.ssh/elasticsearch.pem`
 
 ## Usage
 
