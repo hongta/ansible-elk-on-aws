@@ -15,7 +15,7 @@ Python 2.7.14
 > pip --version
 pip 9.0.3 from /usr/lib/python2.7/site-packages (python 2.7)
 
-> pip install ansible boto3 --user
+> pip install ansible boto3 boto --user
 ...
 > which ansible
 ~/.local/bin/ansible
